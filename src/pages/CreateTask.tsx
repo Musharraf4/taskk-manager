@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import listIcon from "../assets/list.png";
-import { AppButton, Title, Wrapper } from "../utils/styles";
+import { AppButton, AppInput, Title, Wrapper } from "../utils/styles";
 
 const CreateTask = () => {
   const navigate = useNavigate();
@@ -49,12 +49,7 @@ const CreateTask = () => {
         />
       </div>
       <div style={{ textAlign: "center" }}>
-        <input
-          style={{ padding: "10px", width: "300px" }}
-          type="text"
-          maxLength={50}
-          onChange={(e) => setTaskText(e.target.value)}
-        />
+        <AppInput type="text" maxLength={50} onChange={(e) => setTaskText(e.target.value)} />
         <br />
         <AppButton onClick={addTask}>Create Task</AppButton>
       </div>

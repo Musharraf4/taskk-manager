@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+const breakpoints = {
+  xs: "320px",
+  sm: "640px",
+};
 export const Task = styled.li`
   padding: 10px;
   list-style: none;
@@ -39,4 +43,13 @@ export const Wrapper = styled.div`
   border: 1px solid #575b6c;
   border-radius: 15px;
   padding: 0px 10px;
+`;
+
+export const AppInput = styled.input`
+  padding: 10px;
+  width: 300px;
+  @media only screen and (max-width: ${breakpoints.sm}) {
+    flex-direction: row;
+    width: -webkit-fill-available;
+  }
 `;
